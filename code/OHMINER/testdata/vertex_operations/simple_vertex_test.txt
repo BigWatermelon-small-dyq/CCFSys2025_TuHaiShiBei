@@ -1,0 +1,5 @@
+load_hg hyperedges-contact-primary-school.txt node-labels-contact-primary-school.txt
+add_vertex 1
+add_vertex 2
+quit
+

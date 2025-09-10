@@ -1,0 +1,55 @@
+include_directories(../include)
+
+add_executable(overlap_match overlap_match.cpp)
+find_package(OpenMP)
+if(OpenMP_CXX_FOUND)
+    target_link_libraries(overlap_match PRIVATE HyperMining OpenMP::OpenMP_CXX -ldl)
+else()
+    target_link_libraries(overlap_match PRIVATE HyperMining -ldl)
+endif()
+
+add_executable(overlap_match_parallel overlap_match_parallel.cpp)
+if(OpenMP_CXX_FOUND)
+    target_link_libraries(overlap_match_parallel PRIVATE HyperMining OpenMP::OpenMP_CXX -ldl)
+else()
+    target_link_libraries(overlap_match_parallel PRIVATE HyperMining -ldl)
+endif()
+
+add_executable(random_sample random_sample.cpp)
+if(OpenMP_CXX_FOUND)
+    target_link_libraries(random_sample PRIVATE HyperMining OpenMP::OpenMP_CXX)
+else()
+    target_link_libraries(random_sample PRIVATE HyperMining)
+endif()
+
+# 添加动态操作测试可执行文件
+add_executable(dynamic_operations_test dynamic_operations_test.cpp)
+if(OpenMP_CXX_FOUND)
+    target_link_libraries(dynamic_operations_test PRIVATE HyperMining OpenMP::OpenMP_CXX -ldl)
+else()
+    target_link_libraries(dynamic_operations_test PRIVATE HyperMining -ldl)
+endif()
+
+# add_executable(dynamic_hypergraph_test dynamic_hypergraph_test.cpp)
+# TARGET_LINK_LIBRARIES(dynamic_hypergraph_test HyperMining)
+
+add_executable(dynamic_overlap_match dynamic_overlap_match.cpp)
+if(OpenMP_CXX_FOUND)
+    target_link_libraries(dynamic_overlap_match PRIVATE HyperMining OpenMP::OpenMP_CXX -ldl)
+else()
+    target_link_libraries(dynamic_overlap_match PRIVATE HyperMining -ldl)
+endif()
+
+add_executable(interactive_dynamic_system interactive_dynamic_system.cpp)
+if(OpenMP_CXX_FOUND)
+    target_link_libraries(interactive_dynamic_system PRIVATE HyperMining OpenMP::OpenMP_CXX -ldl)
+else()
+    target_link_libraries(interactive_dynamic_system PRIVATE HyperMining -ldl)
+endif()
+
+# 禁用 AVX-512 的测试目标编译（与库一致）
+target_compile_options(dynamic_overlap_match PRIVATE -mavx2 -mno-avx512f -mno-avx512vl -mno-avx512bw -mno-avx512dq)
+target_compile_options(overlap_match PRIVATE -mavx2 -mno-avx512f -mno-avx512vl -mno-avx512bw -mno-avx512dq)
+target_compile_options(overlap_match_parallel PRIVATE -mavx2 -mno-avx512f -mno-avx512vl -mno-avx512bw -mno-avx512dq)
+target_compile_options(dynamic_operations_test PRIVATE -mavx2 -mno-avx512f -mno-avx512vl -mno-avx512bw -mno-avx512dq)
+target_compile_options(random_sample PRIVATE -mavx2 -mno-avx512f -mno-avx512vl -mno-avx512bw -mno-avx512dq)

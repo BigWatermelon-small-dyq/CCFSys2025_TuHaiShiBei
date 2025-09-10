@@ -1,0 +1,1 @@
+mpicxx  -O3 -Wall   CMakeFiles/interactive_dynamic_system.dir/interactive_dynamic_system.cpp.o  -o ../bin/interactive_dynamic_system  -Wl,-rpath,/home/w1nner/learn/OHMiner/OHMiner/build/libs ../libs/libHyperMining.so -ldl /usr/lib/gcc/x86_64-linux-gnu/10/libgomp.so /usr/lib/x86_64-linux-gnu/libpthread.a 

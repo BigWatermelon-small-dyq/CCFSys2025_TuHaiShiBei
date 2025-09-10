@@ -1,0 +1,1 @@
+mpicxx -fPIC -O3 -Wall  -shared -Wl,-soname,libHyperMining.so -o ../libs/libHyperMining.so CMakeFiles/HyperMining.dir/dataloader.cpp.o CMakeFiles/HyperMining.dir/hypergraph.cpp.o CMakeFiles/HyperMining.dir/common.cpp.o CMakeFiles/HyperMining.dir/pattern.cpp.o  /usr/lib/gcc/x86_64-linux-gnu/10/libgomp.so /usr/lib/x86_64-linux-gnu/libpthread.a 

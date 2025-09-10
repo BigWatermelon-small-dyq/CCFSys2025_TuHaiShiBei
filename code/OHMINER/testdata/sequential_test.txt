@@ -1,0 +1,20 @@
+# 顺序操作测试
+# 先添加顶点，再添加超边，然后修改
+
+# 第一阶段：添加顶点
+add_vertex 1000
+add_vertex 1001
+add_vertex 1002
+add_vertex 1003
+
+# 第二阶段：添加超边
+add_edge 1000,1001,1002
+add_edge 1001,1002,1003
+
+# 第三阶段：修改操作
+modify_vertex 1000 10
+modify_edge 0 1000,1001,1002,1003
+
+# 第四阶段：删除操作
+delete_edge 1
+delete_vertex 1003

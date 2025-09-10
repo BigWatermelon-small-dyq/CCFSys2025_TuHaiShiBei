@@ -1,0 +1,34 @@
+load_hg hyperedges-contact-primary-school.txt node-labels-contact-primary-school.txt
+load_pattern pattern_edges.txt pattern_node_labels.txt
+match
+add_vertex 1
+add_vertex 2
+add_vertex 3
+set_vertex_label 242 2
+set_vertex_label 243 3
+add_vertex 1
+set_vertex_label 244 1
+add_vertex 2
+set_vertex_label 245 2
+add_vertex 3
+set_vertex_label 246 3
+delete_vertex 242
+add_vertex 1
+set_vertex_label 247 2
+add_vertex 2
+set_vertex_label 248 1
+delete_vertex 243
+add_vertex 3
+set_vertex_label 249 2
+add_vertex 1
+set_vertex_label 250 3
+add_vertex 2
+set_vertex_label 251 1
+delete_vertex 244
+add_vertex 3
+set_vertex_label 252 2
+add_vertex 1
+set_vertex_label 253 3
+match
+quit
+

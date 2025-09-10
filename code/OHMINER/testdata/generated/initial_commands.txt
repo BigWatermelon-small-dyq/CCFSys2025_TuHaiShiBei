@@ -1,0 +1,2 @@
+load_hg /home/w1nner/learn/OHMiner/OHMiner/testdata/generated/initial_hyperedges.txt /home/w1nner/learn/OHMiner/hypergraphdataset/contact-primary-school/node-labels-contact-primary-school.txt
+load_pattern /home/w1nner/learn/OHMiner/pattern_edges.txt /home/w1nner/learn/OHMiner/pattern_node_labels.txt

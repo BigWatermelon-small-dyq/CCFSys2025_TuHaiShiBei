@@ -1,0 +1,44 @@
+# 动态超图操作测试文件
+# 格式: operation_type [parameters...]
+# 支持的操作:
+# add_vertex vertex_id
+# delete_vertex vertex_id  
+# modify_vertex vertex_id new_label
+# add_edge vertex1,vertex2,vertex3
+# delete_edge edge_id
+# modify_edge edge_id vertex1,vertex2,vertex3
+# add_vertex_to_edge edge_id vertex_id
+# remove_vertex_from_edge edge_id vertex_id
+
+# 添加新顶点
+add_vertex 100
+add_vertex 101
+add_vertex 102
+
+# 添加新超边
+add_edge 100,101,102
+add_edge 50,51,52,53
+
+# 修改顶点标签
+modify_vertex 10 5
+modify_vertex 20 6
+
+# 修改超边
+modify_edge 0 1,2,3,4
+modify_edge 1 10,11,12
+
+# 向超边添加顶点
+add_vertex_to_edge 2 100
+add_vertex_to_edge 3 101
+
+# 从超边移除顶点
+remove_vertex_from_edge 4 50
+remove_vertex_from_edge 5 51
+
+# 删除超边
+delete_edge 10
+delete_edge 15
+
+# 删除顶点
+delete_vertex 200
+delete_vertex 201

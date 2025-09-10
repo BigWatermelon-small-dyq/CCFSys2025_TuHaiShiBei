@@ -1,0 +1,1 @@
+mpicxx  -O3 -Wall   CMakeFiles/random_sample.dir/random_sample.cpp.o  -o ../bin/random_sample  -Wl,-rpath,/home/w1nner/learn/OHMiner/OHMiner/build/libs ../libs/libHyperMining.so /usr/lib/gcc/x86_64-linux-gnu/10/libgomp.so /usr/lib/x86_64-linux-gnu/libpthread.a 
