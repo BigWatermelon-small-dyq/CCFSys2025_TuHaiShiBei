@@ -18,3 +18,5 @@ cd OHMiner
 
 超点动态变化
 ```
+cd OHMiner/testdata/vertex_operations && ../../build/bin/interactive_dynamic_system < clean_vertex_operations_commands.txt
+```
